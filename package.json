@@ -4,7 +4,12 @@
   "description": "Data entry portal for the Salmavitinn project.",
   "main": "scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser-sync": "browser-sync start --server --files index.html styles.css scripts.js",
+    "sass": "node-sass --source-map-embed -rw styles.scss styles.css",
+    "dev": "concurrently npm:sass npm:browser-sync",
+    "lint-css": "stylelint styles.css --syntax css",
+    "lint-scss": "stylelint styles.scss --syntax scss"
   },
   "repository": {
     "type": "git",
