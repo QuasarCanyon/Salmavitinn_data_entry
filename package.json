@@ -1,0 +1,28 @@
+{
+  "name": "salmavitinn_data_entry",
+  "version": "1.0.0",
+  "description": "Data entry portal for the Salmavitinn project.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuasarCanyon/Salmavitinn_data_entry.git"
+  },
+  "author": "Jón Hafsteinn Guðmundsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuasarCanyon/Salmavitinn_data_entry/issues"
+  },
+  "homepage": "https://github.com/QuasarCanyon/Salmavitinn_data_entry#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-primer": "^11.0.1"
+  }
+}
