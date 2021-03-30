@@ -7,10 +7,36 @@
     </head>
 
     <header>
-
+        <h1>Innsetning efnis á Hymnus</h1>
     </header>
 
     <body>
-        
+        <main>
+            <form action="https://salmavitinn-backend.herokuapp.com/submit" method="POST">
+                <fieldset>
+                    <legend>Veldu efnisflokk til að vinna með:</legend>
+                    <div>
+                        <label for="table">Efnisflokkur:</label>
+                        <select id="table">
+                            <option selected> -- Veldu einn möguleika -- </option>
+                            <option value="articles">Sálmagreinar</option>
+                            <option value="liturgy">Um helgisiði</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Viltu breyta efni sem fyrir er eða bæta við nýju?</legend>
+                    <div>
+                        <label for="operation">Aðgerð:</label>
+                        <select id="operation">
+                            <option value="insert" selected>Bæta við nýju</option>
+                            <option value="update">Breyta</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <button>Fylla út</button>
+            </form>
+        </main>
+        <script src="scripts.js"></script>
     </body>
 </html>
