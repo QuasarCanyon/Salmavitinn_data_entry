@@ -34,13 +34,19 @@ const program = (() => {
         bookItem.classList.add('list__item');
         const list = el('ul', articlesItem, liturgyItem, bookItem);
         form.appendChild(list);
-        articlesItem.addEventListener('click', listItemsInTable(operation));
-        liturgyItem.addEventListener('click', listItemsInTable(operation));
-        bookItem.addEventListener('click', listItemsInTable(operation));
+        articlesItem.addEventListener('click', () => {
+            listItemsInTable(operation, 'articles');
+        });
+        liturgyItem.addEventListener('click', () => {
+            listItemsInTable(operation, 'liturgy');
+        });
+        bookItem.addEventListener('click', () => {
+            listItemsInTable(operation, 'books');
+        });
     };
 
-    function listItemsInTable (operation) {
-        console.log('Got here!');
+    function listItemsInTable (operation, table) {
+        console.log(table);
     }
 
     function init() {
