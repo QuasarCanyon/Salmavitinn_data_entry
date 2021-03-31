@@ -12,7 +12,17 @@
 
     <body>
         <main>
-            <form action="https://salmavitinn-backend.herokuapp.com/submit" method="POST">
+            <div class="menu">
+                <div class="start">
+                    <p>Viltu breyta efni sem fyrir er eða bæta við nýju?</p>
+                    <ul class="list start__list">
+                        <li class="list__item start__list--1">Bæta við nýju</li>
+                        <li class="list__item start__list--2">Breyta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <form action="https://salmavitinn-backend.herokuapp.com/submit" method="POST">
                 <fieldset>
                     <legend>Veldu efnisflokk til að vinna með:</legend>
                     <div>
@@ -32,13 +42,14 @@
                     <div>
                         <label for="operation">Aðgerð:</label>
                         <select id="operation">
-                            <option value="insert" selected>Bæta við nýju</option>
+                            <option selected> -- Veldu einn möguleika -- </option>
+                            <option value="insert">Bæta við nýju</option>
                             <option value="update">Breyta</option>
                         </select>
                     </div>
                 </fieldset>
                 <button>Fylla út</button>
-            </form>
+            </form> -->
         </main>
         <script src="scripts.js"></script>
     </body>
