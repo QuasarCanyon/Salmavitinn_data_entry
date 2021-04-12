@@ -47,6 +47,13 @@ const program = (() => {
 
     function listItemsInTable (operation, table) {
         console.log(table);
+        if (table === 'articles') {
+
+        } else if (table === 'liturgy') {
+
+        } else if (table === 'books') {
+
+        }
     }
 
     function init() {
