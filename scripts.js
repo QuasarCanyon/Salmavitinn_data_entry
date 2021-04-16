@@ -47,13 +47,21 @@ const program = (() => {
 
     function listItemsInTable (operation, table) {
         console.log(table);
+        let data;
+        const form = document.querySelector('.after');
+        const box = el('select');
+        form.appendChild(box);
         if (table === 'articles') {
-
+            data = fetchTitles
         } else if (table === 'liturgy') {
 
         } else if (table === 'books') {
 
         }
+    }
+
+    function fetchTitles (table) {
+
     }
 
     function init() {
