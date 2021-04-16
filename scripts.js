@@ -45,23 +45,44 @@ const program = (() => {
         });
     };
 
-    function listItemsInTable (operation, table) {
+    function listItemsInTable(operation, table) {
         console.log(table);
-        let data;
         const form = document.querySelector('.after');
         const box = el('select');
         form.appendChild(box);
-        if (table === 'articles') {
-            data = fetchTitles
-        } else if (table === 'liturgy') {
-
-        } else if (table === 'books') {
-
-        }
+        fetchTitles(operation, table, box);
     }
 
-    function fetchTitles (table) {
+    async function fetchTitles(operation, table, box) {
+        let result;
+        let data;
+        if (table === 'articles') {
+            result = await fetch(`${ARTICLES_URL}`);
+            if (result.status < 200 || result.status > 400) {
+                // Nothing
+            } else {
+                data = await result.json();
+            }
+        } else if (table === 'liturgy') {
+            result = await fetch(`${LITURGY_URL}`);
+            if (result.status < 200 || result.status > 400) {
+                // Nothing
+            } else {
+                data = await result.json();
+            }
+        } else if (table === 'books') {
+            result = await fetch(`${BOOKS_URL}`);
+            if (result.status < 200 || result.status > 400) {
+                // Nothing
+            } else {
+                data = await result.json();
+            }
+        }
+        showTitles(operation, table, box, data);
+    }
 
+    function showTitles(operation, table, box, data) {
+        
     }
 
     function init() {
