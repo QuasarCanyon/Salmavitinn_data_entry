@@ -20,7 +20,11 @@ const program = (() => {
     };
 
     function runClearAll() {
-
+        const form = document.querySelector('.after');
+        while (form.hasChildNodes) {
+            let toRemove = form.lastChild;
+            form.removeChild(toRemove);
+        }
     };
 
     function listTables(operation) {
