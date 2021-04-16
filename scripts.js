@@ -46,7 +46,6 @@ const program = (() => {
     };
 
     function listItemsInTable(operation, table) {
-        console.log(table);
         const form = document.querySelector('.after');
         const box = el('select');
         form.appendChild(box);
@@ -82,7 +81,7 @@ const program = (() => {
     }
 
     function showTitles(operation, table, box, data) {
-        
+
     }
 
     function init() {
